@@ -7,15 +7,23 @@
 		<description>Nenrikido's RSS feed</description>
 		<link>https://nenrikido.neocities.org</link>
 		<language>en-us</language>
-		<lastBuildDate> Mon, 28 Mar 2023 22:45:22 +0000 </lastBuildDate>
+		<lastBuildDate> Wed, 29 Mar 2023 14:47:54 +0000 </lastBuildDate>
 		<ttl>60</ttl>
         <webMaster>nenrikido@pm.me</webMaster>
+
+		<item>
+			<title>Blog Post: Site Updates</title>
+			<description>New web listing, website is now on Github, and some new links.</description>
+			<link>https://nenrikido.neocities.org/blog</link>
+			<pubDate>Wed, 29 Mar 2023 14:47:54 +0000</pubDate>
+			<author>nenrikido@pm.me (rio)</author> 
+		</item>
 
 		<item>
 			<title>Blog Post: Reusable HTML</title>
 			<description>A little tutorial about web components.</description>
 			<link>https://nenrikido.neocities.org/blog</link>
-			<pubDate>Mon, 28 Mar 2023 22:45:22 +0000</pubDate>
+			<pubDate>Tue, 28 Mar 2023 22:45:22 +0000</pubDate>
 			<author>nenrikido@pm.me (rio)</author> 
 		</item>
 
@@ -23,7 +31,7 @@
 			<title>Code page update</title>
 			<description>Code page is up now! Still a bit sparse; hopefully this motivates me to fix up and re-release some old code. I'm thinking about making some stuff for Neocities (and perhaps Neopets?) too.</description>
 			<link>https://nenrikido.neocities.org/code</link>
-			<pubDate>Mon, 28 Mar 2023 02:52:22 +0000</pubDate>
+			<pubDate>Tue, 28 Mar 2023 02:52:22 +0000</pubDate>
 			<author>nenrikido@pm.me (rio)</author> 
 		</item>
 		<item>
