@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>NENRIKIDO</title>
+    <link rel='shortcut icon' type='image/x-icon' href='https://dl.dropbox.com/s/x904t9bpbvzlqnr/favicon-32x32.png' />
+    <!--CSS-->
+    <link href="css/themes.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body>
+    <back-top></back-top> <!-- Navigation -->
+    <nav id="navAlt">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-8 col-lg-12 py-2">
+                <div class="navWrapper"> <a class="navLink" href="blog.html">
+                        <div id="blog"><br><br></div>Blog
+                    </a><br> <i class="fa-regular fa-circle-down"></i><br>
+                    <ul id="filterNav" class="filters-list">
+                        <li data-filter="*">show all</li>
+                        <li data-filter=".personal">personal</li>
+                        <li data-filter=".tutorials">tutorials</li>
+                        <li data-filter=".reviews">reviews</li>
+                        <li data-filter=".updates">site updates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <mini-music></mini-music>
+        <mini-search></mini-search>
+    </nav>
+    <main>
+        <div class="cardsWrapper">
+            <div class="row justify-content-center">
+                <div class="projects-list">
+                    <!--3/28/23 POST #5-->
+                    <div class="post-item updates">
+                        <div class="cards">
+                            <card-header></card-header>
+                            <div class="cardsBody" style="max-height:25rem; overflow:scroll;">
+                                <h4>site updates</h4>
+                                <blockquote>mar. 29, 2023</blockquote>
+                                <p>i'm still thinking on potential blog layout ideas (at some point, i want each blog post to be its own page so i can link to specific blog posts), but the site is actually coming together much quicker than i thought it would.</p>
+                                <p>anyways i joined the <a href="https://fujofans.scumsuck.com/">fujofans</a> weblisting i saw on <a href="https://soulbyte.me/">soulbyte's</a> home page and i'm so glad i know it exists now. my twitter dn has been yu yu hafujo for like a year and i was worried i wasn't properly conveying my feminist values here.</p>
+                                <p align="center"><a href="images/blog/twt.png" data-lightbox="twt"> <img src="images/blog/twt.png" style="max-width: 80%;"></a></p>
+                                <p>i added some new sites to the cool sites section & some more resources in the web dev section. i know i should actually be working on my commissions page and whatnot, but it's just more fun to click around random websites. sorry. i also keep forgetting to leave comments or follow the people i list, which is a bit embarrassing. will rememdy this eventually.</p>
+                                <p>i also got myself into a bit of a pickle. neocities drag-and-drop functionality is a bit...let's say unreliable. so at some point i got fed up and just put all my media files in dropbox and linked that way. this is not ideal for like, a lot of reasons, so i'll slowly backtrack and host all the files via neocities.</p>
+                                <p>i also still need to clean up some of my older tumblr themes (i actually wince looking at the code now) and put them on my <a href="/code.html">code</a> page. right now only 2 are there. so sad!</p>
+                                <p>oh, i also put the site up on <a href="https://github.com/js044/nenrikido">github</a>. i'll try to keep the code up to date. anyways feel free to poke around. i'm a big copyright hater so go nuts with copy/pasting, just please no hotlinking, and if you use code i didn't write, please be mindful of attribution. the code is still pretty messy, but ah well. transparency and whatnot.</p>
+                                <p>i think those are all the site updates i have for now. tbh i'm just procrastinating stuff and wanted an excuse to post the bavarian village fujoshi tweet but anyways have a good day. remember to drink water and whatnot.</p>
+                        </div>
+                    </div>
+                </div>
+                    <!--3/28/23 POST #4-->
+                    <div class="post-item tutorials">
+                        <div class="cards">
+                            <card-header></card-header>
+                            <div class="cardsBody" style="max-height:29rem; overflow:scroll;">
+                                <h4>repeatable HTML snippets - web components &amp; static site generators</h4>
+                                <blockquote>mar. 28, 2023</blockquote>
+                                <p>first thing's first: here's the demo. you can read the rest of the post for context.</p>
+                                <p><p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="OJoopqa" data-user="kujara1" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"> <span>See the Pen <a href="https://codepen.io/kujara1/pen/OJoopqa"> web components card demo</a> by jay (<a href="https://codepen.io/kujara1">@kujara1</a>) on <a href="https://codepen.io">CodePen</a>.</span> </p>
+                            </p>
+                            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                                <h4>my coding backstory (sad violin)</h4>
+                                <p>the first time i made a Real Website (cicada), i had never heard of <a href="https://docs.getdbt.com/terms/dry">DRY code</a>. DRY stands for &quot;don&#39;t repeat yourself,&quot; and it&#39;s often cited as one of the most important guiding principles for both backend and frontend coding. it <a href="https://dev.to/wuz/stop-trying-to-be-so-dry-instead-write-everything-twice-wet-5g33">isn't a hard rule</a>, but the consensus tends to be that if you repeat the same code more than three times, you may want to consider making it repeatable.</p>
+                                <p>but i didn't know this back then. my experience was limited to single pages and tumblr themes, so i&#39;d never thought about page management before. at first, it wasn&#39;t so bad. copying and pasting the stylesheets, scripts, header, footer—it&#39;s manageable for your core pages. but we were running a litmag, and this meant publishing issues that were usually at least 30 pages, and sometimes hit over 50. </p>
+                                <p>i dreaded the task every semester. it was a time consuming and tedious nightmare that no one wanted to help me with (for obvious reasons.) invariably, i&#39;d mess up the copy and pasting at some point, and then multiple pages would have mistakes. i had to explain to our managing editor that it&#39;d take days to change any navigation links because i&#39;d have to manually update every single page. he just stared at me.</p>
+                                <p>i knew this was Wrong, but i kept telling myself that this wasn&#39;t my real job, so i had no reason to learn a better way—i was a graphic design major, not a computer scientist! this was just my flimsy bandaid solution until a proper web developer finally applied and saved the day!</p>
+                                <p>that never happened. CCM has existed since 2018, and we have never had one single person apply to be web developer. it has always just been me, tearfully wondering if that numb feeling in my wrist was of concern as i tried to copy and paste dozens of pages worth of identical content. things came to a head when i discovered that i&#39;d been paying money for a dynamic site host when i could have been hosting it for free. embarrassing! harrowing! exhausting! </p>
+                                <p>i felt defeated. there was so much i didn&#39;t know and i was at a loss of where to even begin. i knew so little that i didn&#39;t even know the right search terms to input. there is so much information floating out there that it&#39;s overwhelming. i considered giving up.</p>
+                                <p>instead, i took the site down for 6 months and learned.</p>
+                                <h4 id="static-site-generators">static site generators</h4>
+                                <p>what i ultimately did was use a static site generator, which i highly recommend for anyone with a project that has as many pages as we did. i used hugo, and although i haven't tried out other static site generators, i am deeply in love with it to the point it now feels weird making stuff without it. the learning curve is intimidating, and it takes a lot of time to get comfortable with it, but you&#39;ll get there. i struggled a lot because i had to create a theme from scratch and the theme had a lot of interactive components that i didn&#39;t have enough skill to execute effectively, but the hugo community was super helpful and active. and if you&#39;re using pre-made themes, it&#39;s not hard to get started.</p>
+                                <p>hugo elegantly resolves the issue of repeatable code snippets through things like <a href="https://gohugo.io/templates/partials/">partials</a> and <a href="https://gohugo.io/content-management/shortcodes/">shortcodes</a>. static site generators in general were formulated with goals like this in mind. jekyll lets you use <a href="https://jekyllrb.com/docs/includes/">includes</a> and gatsby has <a href="https://www.gatsbyjs.com/docs/how-to/routing/layout-components/">layout components</a>.</p>
+                                <p>static site generators aim to make things very, very simple for you. they tend to prioritize markdown over HTML and encourage modularity in all design components. this is excellent for information, text-dense websites in particular. </p>
+                                <p>but maybe it&#39;s not so great for people who have small websites, for people who don&#39;t want to be bound by templates (even of their own creation), or maybe it&#39;s just more support than you need. and it certainly presents an additional challenge when deploying somewhere like neocities. so are there other solutions?</p>
+                                <h4 id="web-components">web components</h4>
+                                <p>i recognized a familiar feeling as i was working on this site. i was copying and pasting the card header, which is a bit dense due to how it&#39;s constructed (bootstrap columns + fontawesome icons). by the 20th card header across pages, i was officially twitchy. then, as i was copying and pasting my start menu, my brain started melting. i cannot go through this again, i decided. i&#39;d told myself it&#39;d be fine since it&#39;s only a few pages, but it&#39;s too late. i know the truth now. there&#39;s no good reason to repeat components that often.</p>
+                                <p>it made me realize i still fundamentally hadn&#39;t found a solution for repeatable HTML components. sure, static site generators can solve that issue for me, but how was i going to do with a service like neocities that was intentionally whittled down to the bare essentials?</p>
+                                <p>a lot of people on neocities seem to like iframes, but i don&#39;t think they&#39;re well-suited to this particular use-case. they&#39;re not simple code snippet injections, they&#39;re entire html files being injected into another html file. you have to style each individual iframe because it won&#39;t inherit the parent page&#39;s styling—which ends up undermining the goal of keeping your code DRY.</p>
+                                <p>cue...<a href="https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/">web components</a>!! mdn docs cover web components <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">here</a> as well. long story short, web components are a suite of tools you can utilize with vanilla javascript to create all sorts of repeatable code. i&#39;ve been told they funtion a lot like react.js components. here&#39;s a crash course video on web components and the accompanying <a href="https://codepen.io/bradtraversy/pen/wvaXKoK">codepen</a>. </p> 
+                                <div class="col-6  mx-auto">
+                                <iframe class="yt" src="https://www.youtube.com/embed/PCWaFLy3VUo" title="Web Components Crash Course" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                                <p>as of writing this, i&#39;ve only needed to use custom elements, which are fairly simple to use:
+                                    <ul>
+                                        <li>first, you create your reusable HTML snippet.</li>
+                                        <li>then, you create a javascript file, decide on the name of your component, and build it. the syntax generally looks like this:</li>
+
+<pre> <code>
+class TITLE extends HTMLElement {
+    constructor() {
+    super();
+    this.innerHTML = `insert your HTML here`;
+     }
+       }
+  window.customElements.define('TITLE-ID', TITLE)
+</code></pre>  
+                                        <li>from there, you can link the component and invoke the code in your HTML like <code> &lt;TITLE-ID&gt;&lt;/TITLE-ID&gt; </code> </li>
+                                        <li>note: your title-id must be two words combined with a hyphen. your title can be whatever you like though.</li>
+                                        <li>note: remember to include the <code>`</code> tags when you insert your HTML.</li>
+                                    </ul>
+                                    i currently use six components and they alone have saved me well over 1k lines of code. hopefully you find some utility in this little post and can get started with repeatable snippets too. love & peace on planet earth!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--3/27/23 POST #3-->
+                    <div class="post-item personal">
+                        <div class="cards">
+                            <card-header></card-header>
+                            <div class="cardsBody" style="max-height:25rem; overflow:scroll;">
+                                <h4>misogyny online: a rant</h4>
+                                <blockquote>mar. 27 2023</blockquote>
+                                <p>i wasn&#39;t really planning on posting about discourse, esp. since a lot of people seem to use this part of the web to escape it, but oh well. i was pretty much born on tumblr; it&#39;s where i learned to code, and alas, it is also where i learned to get irritated during 3AM scrolling sessions. and lord forgive me for i have scrolled.</p>
+                                <p>but anyways, something that just drives me insane is the wave of cutesy, unbearable MRA-ish rhetoric that has been circulating that site for the last few years. a lesbian will get online and make an obviously satirical post about how men should be feminine, and before you know it, the comments are filled with people posting pics of the most mid white men you&#39;ve ever seen and super subversive takes like &quot;let men be masculine.&quot; </p>
+                                <p>it&#39;s so unserious i can&#39;t take it. it&#39;s also crazy to me that half the userbase will readily admit this is their way of owning the misandrists or whatever. like lmao, if you&#39;re such a reactionary AHEM i mean contrarian that you can get goaded into full-blown anti-feminism because of 200 note tumblr posts then you need to get a grip. like i don&#39;t care.</p>
+                                <p>i don&#39;t understand how you can get online and make a post like &quot;ummm did you know women,,,, can lie,,,&quot; and think you&#39;ve said something illuminating. like wow, you are so brave and strong for regurgitating cultural narratives that have dominated society for hundreds of years. but right, &quot;we don&#39;t talk enough&quot; about how women can be bad.</p>
+                                <p>and it&#39;s so funny bc most of these people would likely describe themselves as feminists. i think it speaks to a broader issue where people treat ideologies like stickers to decorate a name tag rather than complex schools of thought. there could be thousands of books on a topic dating back since the written word began and you&#39;d still have a bunch of people distilling it into 10 words or less and thinking they&#39;re qualified to be experts on the topic. </p>
+                                <p>i try really hard to be patient about it. &quot;they&#39;re just working things out,&quot; i tell myself. &quot;it&#39;s normal to have some growing pains.&quot; but they are so smug, so self-assured as they go, &quot;it&#39;s so simple!&quot; about topics that are anything but. and it&#39;s infuriating because you want to scream, of COURSE it&#39;s simple when you flatten a complex topic into a singular witty tweet. it&#39;s easy to do that. i could do that! but it would be vapid and ultimately a disservice to my politics! your garbled TLDR will never stand up to scrutiny because you haven&#39;t given it an iota of thought!</p>
+                                <p>HOW on earth you can feel comfortable assuming a tone of confident authority when you do not understand the most fundamental basics of what you&#39;re speaking as an authority about is beyond me. but it happens ALLLLLL the time. it&#39;s why you have people with hammer &amp; sickle pins on their kankens who&#39;ve never heard of &amp; do not care to know about the labor theory of value, why people who are most condescendingly vocal about antiracism are often the first to microaggress you at a work meeting, and also why people feel comfortable calling themselves feminists when their idea of activism is saying &quot;let women wear makeup!&quot; </p>
+                                <p>it&#39;s this brand of &quot;activism&quot; that says you don&#39;t have to really do anything. you don&#39;t have to examine your biases or question why society is structured the way it is. you don&#39;t have to study or read or think. all you have to do is convince yourself you&#39;re ontologically good and incapable of harm and slap on a handful of labels and boom! you&#39;re progressive. but to me, that&#39;s just fashion. that&#39;s not real.</p>
+                                <p>i could make a much longer and more emotional post about how this really, really hit me when tara reade credibly accused biden of rape and everyone tore her to shreds. i realized that the &quot;solidarity&quot; with women people showed during #metoo was all posturing. people are feminists when it&#39;s politically convenient. it was the first of many times that i would realize how tissue paper thin people&#39;s allyship generally is, not just when it comes to feminism, but tara reade&#39;s story really got to me. i felt really hopeless about it for a long time. still do, a bit.</p>
+                                <p>a decent number of leftists came out in support of tara reade, but a sizable chunk later revealed they were really only trying to ~stick it to the neolibs~ and never truly cared. it was just a convenient political bludgeon to gleefully point out the hypocrisy of &quot;believe women&quot; turning into &quot;what was she wearing&quot; within minutes. but in reality, those same leftists are out here making jokes about how &quot;when the revolution comes we get to fuck the boss&#39; wife!&quot;</p>
+                                <p>but if i say &quot;this relies on misogynistic logic that frames women as spoils of war, passive agents who only exist to be sexually humiliated as proxies to hurt the men in their lives, this is why i don&#39;t trust your allyship,&quot; i&#39;m the bad guy. i&#39;m divisive, a leftist infighter, a naughty feminist ruining the joke. like, fine then. that is fine with me. sure. i will get a shirt that says i &lt;3 leftist infighting because i&#39;m very willing to die on the hill that women&#39;s rights aren&#39;t superfluous add-ons like extra onions on your discourse sandwich. </p>
+                                <p>this is already getting way longer than i meant for it to, but another thing!! i remember when andrew tate was arrested, there was this semi-popular post that was like, "i don't care about his rhetorical misogyny, i care he was trafficking women!!" and i think that perfectly illuminates what i'm so fed up with. this idea that misogyny is purely discursive and has no bearing on material reality is so pervasive online so OF COURSE the discourse is incoherent and divorced from reality and i am so so so soooo so so so sick of it.</p>
+                                <p>but i&#39;m glad i now understand what a lot of people are really doing when they finger wag at me about politics. they are wearing ideology as fashion, as aesthetic, as a brand, and they&#39;ll abandon it in a heartbeat when it isn&#39;t trendy anymore. and when they do, i&#39;ll still be here, as always, listening to <a href="https://www.youtube.com/watch?v=Dg9nULGeMcc">mitski scream compliation</a>. what else is a girl to do!</p>
+                                <p><b>other updates:</b> (1) helping my friend with their portfolio site & thesis page, it looks pretty banger imo. i discovered you can password protect https pages <a href="https://www.maxlaumeister.com/pagecrypt/">pretty easily</a> too! (2) still working on moving, it's been a bit of a mess... (3) i checked out some neopets userlookup stuff bc i thought it'd be fun to make a few themes and put them on my code page, but my god the styling options are so limited. everything is bound by tables to begin with, which...bruh. i mean i get why & i still wanna try it out but i'm just sooo spoiled by css variables and media queries now. you can't even use css grids!! oh, the agony.. (4) rewatched madoka magica. cried again. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--3/23/23 POST #2-->
+                    <div class="post-item tutorials">
+                        <div class="cards">
+                            <card-header></card-header>
+                            <div class="cardsBody" style="max-height:25rem; overflow:scroll;">
+                                <h4>making a website (part 1): the planning stage</h4>
+                                <blockquote>mar. 23 2023</blockquote>
+                                <p>first things first: blog got a bit of a makeover! anyways, this is the first post in a series i've planned about building websites. it's aimed towards the absolute beginner, but hopefully it'll still be interesting or useful for people with more experience.</p>
+                                <p>i find coding to be similar to many other creative processes. like cooking, drawing, or writing, it helps save a lot of time and effort to plan out your project beforehand. this is true even if you don't plan for your site to be elaborately designed. it is useful to establish (1) what kind of information you'll have on your site and (2) how you want this information displayed and organized. this will help you select (3) the tools you'll need for your project.</p>
+                                <h6>(1) information</h6>
+                                <p>some questions you might ask yourself: what is your site about? what sorts of pages do you want on your website? how many of them will there be? are you interested in making a <a href="https://blog.hubspot.com/website/static-vs-dynamic-website">static website or a dynamic website?</a> is your site professional or personal? are there any special features you want your website to have (such as password protected sections, contact forms, shops, etc.)? do you want a community-oriented site or one that's more standalone? is the site image-heavy and therefore in need of space considerations? all of this will be relevant when it's time to choose web hosting, come up with designs, etc. there's a huge difference in use-case between a 5 page static site on neocities and a dynamic blog with hundreds of pages.</p>
+                                <h6>(2) design</h6>
+                                <p>once you have a general idea of what you want your site to be like, it's less daunting to start researching other sites/designs and sketching out preliminary ideas. <a href="https://pin.it/6lO2Wph">here's</a> the pinterest board i put together when i was working on this site. you can definitely tell where i pulled inspiration.</p>
+                                <p>and here's an excerpt from some of the design brainstorming i did for this website. (there are currently 6 pages worth of drafting and notes in total...lol)</p>
+                                <p align="center"><a href="https://dl.dropbox.com/s/ie25ed5vot9fpyd/planning.jpg" data-lightbox="plan"> <img src="https://dl.dropbox.com/s/ie25ed5vot9fpyd/planning.jpg" style="max-width: 80%;"></a></p>
+                                <p>notice that i am still considering information and where i want it to go—these steps build off each other and aren't always going to happen in perfect sequential order. it's also possible things will end up being very different once you actually start coding (for example, i ended up ditching the different colored cards in favor of themes.)</p>
+                                <p>when designing (and coding), it can help to think of sites in components: there's the header, the body, and the footer. you may or may not want sidebars. also consider how you want people to interact with your site components. what do you want to happen when someone clicks on an image? do you want <a href="https://www.w3schools.com/css/css_tooltip.asp">tooltips?</a> what should happen to links when you hover? you don't necessarily have to have all these answers right away, as a lot of finer details get ironed out as you work on your site, but thinking about these things ahead of time can help you prepare.</p>
+                                <p style="font-weight: bold;">notes on design:</p>
+                                <ul>
+                                    <li>there are a variety of best practices for design that are outside the scope of this post. you can start <a href="https://webflow.com/blog/web-design-for-beginners">here</a> for some pointers on things like thinking in grids and considering color theory. <a href="https://www.feelingpeaky.com/9-principles-of-good-web-design/">this</a> article also outlines 9 specific design principles that can help guide you.</li>
+                                    <li>it's possible (likely, even) that there will be elements in your planned design that you do not know how to implement yet. that is okay! you are learning. don't get discouraged. there are a multitude of tools out there to help you bring your idea to the life, and ultimately, even if you have to temper your design to match your current skill level, it's still a good learning experience to logic through some of these design issues.</li>
+                                </ul>
+                                <h6>(3) tools</h6>
+                                <p>there are a ton of tools to get you started building websites. this is amazing for many reasons, but it can get overwhelming really quickly. getting your ideas off paper and onto the screen isn't always as easy as you'd like, but hopefully these notes can give you a starting point.</p>
+                                <p style="font-weight: bold;">notes on CSS libraries & frameworks:</p>
+                                <ul>
+                                    <li>if responsonsive displays are important to you (your website looking good on mobile & tablets in addition to desktop), i'd highly recommend using a CSS library or framework. i have a few listed on my <a href="links.html#web-dev-resources">links</a> page under the resources section. if you care about responsiveness but don't want to commit to a CSS library or framework, you can also use the <a href="https://cssgrid-generator.netlify.app/">CSS grid generator</a> listed.</li>
+                                    <li>CSS libraries & frameworks all have their pros/cons. bootstrap is robust and easy to use, but it can also be very opinionated when it comes to design. if you're also opinionated, you may find yourself butting heads with it and working to override styles. tailwind, on the other hand, is more design-agnostic but requires a bit more set-up. you may prefer semantic or utility classes. you may want a lightweight library or a more comprehensive one. it's hard to know what you personally prefer until you try a few out, and different situations will be better suited to different libraries & frameworks.</li>
+                                </ul>
+                                <p style="font-weight: bold;">notes on static site generators:</p>
+                                <ul>
+                                    <li>i do not have a section on my resources page (yet!) & it's a bit beyond the scope of this post, but if you're planning on a site with many, many pages, it might be useful for you to use a static site generator like hugo, jekyll, or gatsby. you can find a comprehensive list <a href="https://jamstack.org/generators/">here</a> or learn more about the function of SSGs <a href="https://www.cloudflare.com/learning/performance/static-site-generator/">here.</a></li>
+                                    <li>please note there isn't a ton of documentation on using SSGs in conjunction with neocities. most commonly, you'll build your site with an SSG, push the code to github, and then deploy.</li>
+                                    <li>if you are interested in using SSGs with neocities, <a href="https://neonaut.neocities.org/neocities/">here's</a> one of the few examples of someone doing so.</li>
+                                </ul>
+                                <p style="font-weight: bold;">notes on web hosting & deployment:</p>
+                                <ul>
+                                    <li>there is a smorgasbord of options when it comes to hosting & deploying sites online. i'm using neocities because i think the community element is interesting, but it's far from the only option. </li>
+                                    <li>if you're creating a static site, you might consider options like github pages, netlify, or neocities.</li>
+                                    <li>if you're working on a complex dynamic site, you might be more interested in something like heroku, firebase, or azure.</li>
+                                    <li>note: there is a difference between dynamic server-side rendered websites (which use tools like PHP & node.js) and dynamic client-side websites (which uses tools like react & vue). some sites known for static site hosting may be able to host dynamic client-side websites—for example, github pages can host the latter, but not the former.</li>
+                                    <li>about neocities specifically: neocities is intentionally very simple. this can either be a strength or weakness depending on your use-case. you won't be able to use a lot of tools that exist to make things easier and faster, but this also means the barrier of entry is much lower. it couldn't be simpler to upload to neocities, but this also means that complicated sites can get unwieldly very fast if you don't have much experience.</li>
+                                </ul>
+                                <p>i think i'll wrap the post up here. partly because it's 3AM and partly because i think this is a good starting off point for anyone interested in building a site. i have a few ideas of what part 2 should cover, but if you have any suggestions, please let me know.</p>
+                                <p>as for personal life stuff: rewatched serial experiments lain recently & started watching utena, which is causing two very different aesthetic sensibilities to bleed together in my brain. feeling vaguely inspired to smash rose & tech motifs together in an upcoming theme, but only time will tell if this is genius or terrible. (still need to make that code page, now that i think about it...)</p>
+                                <p>EDIT: ok, awake now and edited this post a bit, added a few things, fixed some wording, messed with mobile blog displays...yeah. time to work on some cicada stuff now :salute:</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--3/17/23 POST #1-->
+                    <div class="post-item personal">
+                        <div class="cards">
+                            <card-header></card-header>
+                            <div class="cardsBody" style="max-height:25rem; overflow:scroll">
+                                <h4>"why'd you make this site?", "how did you start coding?", and other questions</h4>
+                                <blockquote>mar. 17 2023</blockquote>
+                                <p>my 26th birthday was earlier this month.</p>
+                                <p>once you reach a certain age, the birthday wishes can take on an anxious "what-are-you-doing-with-your-life" cadence. i'm single, i'm not gainfully employed, and i dropped the MLIS pipe dream when i was forced to accept that i don't have $15k laying around. so i can understand a thinly veiled concern text from people who believe success is marked by homeownership and cars.</p>
+                                <p>but in the midst of the furrowed brows and loaded questions about my life, i just kept thinking, "damn, i never made that neocities."</p>
+                                <p>making a neocities has been a "thing i'll do when my skills are good enough" for years now. truthfully, i'm still not comfortable with my skill level, and i don't know if i ever will be. but on my 26th birthday, i was sitting there, sadly twirling my complimentary birthday joint, reflecting on my neocities-lessness.</p>
+                                <p>i, like many other neocities users, got started with front-end coding by fiddling with tumblr themes. (well, technically, i first messed with HTML as an elementary schooler trying to get mcr teenagers to autoplay on my sasunaru themed neopets page, but i really started learning with tumblr.) i was (am) a bit (a lot) of a control freak, and i liked the control i was given over my own space, especially on an internet that was growing increasingly homogenous and bland. </p>
+                                <p>i've come a long way since i was a teenager meticulously decorating my blog with danganronpa renders and misusing css combinators, but i've adamantly maintained that it's valuable to stake your space online and loudly voice your displeasure with corporate internet interests. i've invested literally hundreds of hours into understanding the ins and outs of static site generators and css frameworks. i've spent months banging my head against walls, posting on stackoverflow, and scouring docs, all in service of making things look and behave the way i want them to. (and specifically for the <a href="https://www.cicadacreativemag.com/">cicada website</a>, which i have now coded from the ground-up four different times. it is even more painful than you think.)</p>
+                                <p>the effort has paid off in some pretty big ways. this website has taken me a fraction of the time it would've a few years ago. i look at old code and cringe, but i know how i'd rewrite it now. i inch towards becoming more secure in my knowledge base every time i open a code editor. but my perfectionism can be debilitating and chasing some mythical "good enough" standard has ultimately been destructive for my creativity (and overall happiness).</p>
+                                <p>anyways, i realized a few things as the smoke (literally) cleared. first, i needed to make a neocities. not eventually. right now! it might be a mess, but it'd be my mess, and i need to learn to let things be in-progress. second, i wanted to help other people make their own sites, and hopefully mitigate a bit of the head-banging inherent in coding. that is more important to me than impressing people who think money measures your worth. </p>
+                                <p>so for me, this site also functions as a bit of resistance. resistance against the idea that efficiency is inherently more important than creativity, resistance against the idea that hobbies are a waste of time unless you can turn a profit, and resistance against the notion that everything must be polished and perfect and professional all the time. </p>
+                                <p>i want to use this blog specifically to post helpful guides (once i get the rest of the site coded, that is...) and help make HTML/CSS more accessible to people with zero formal exposure. i also want this site as a whole to be proof that even a certified tumblrina faildaughter can contribute to communities, even in small ways. if even one person lifts a chunk of code off this site, i'll take it as a win.</p>
+                                <p>so, in lieu of doing a normal adult activity to mark the milestone of being closer to 30 than 20, i have spent the last week huddled over my laptop trying to make this site work. and honestly, i feel pretty good about it. i even feel good about how long this blog post is.</p>
+                                <p>all this to say: nice to meet you! do not give in! consider making a website! talk to you soon!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <start-menu></start-menu>
+    <taskbar-footer></taskbar-footer>
+</body>
+<script type="text/javascript" src="js/theme.js"></script>
+<script type="text/javascript" src="js/components/card-header.js"></script>
+<script type="text/javascript" src="js/components/start-menu.js"></script>
+<script type="text/javascript" src="js/components/taskbar-footer.js"></script>
+<script type="text/javascript" src="js/components/back-to-top-btn.js"></script>
+<script type="text/javascript" src="js/components/mini-music.js"></script>
+<script type="text/javascript" src="js/components/mini-search.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+<script src="js/isotope.js"></script>
+<script type="text/javascript" src="js/imagesLoaded.js"></script>
+<script type="text/javascript" src="js/init-isotope-2.js"></script>
+<script src="js/functions.js"></script>
+<script type="text/javascript" src="js/masonry-fix.js"></script>
+<script type="text/javascript" src="js/back-to-top.js"></script>
+<script type="text/javascript" src="js/clock.js"></script>
+<script>
+    twemoji.parse(document.body)
+</script>
+<script>
+    document.querySelector('.playpause').addEventListener('click', playpause);
+    
+    function playpause() {
+      if (document.querySelector('.playpause').innerHTML == '<i class="fas fa-play"></i>') {
+        document.querySelector('#musicsrc').play();
+        document.querySelector('.playpause').innerHTML = '<i class="fas fa-pause"></i>';
+      } else {
+        document.querySelector('#musicsrc').pause();
+        document.querySelector('.playpause').innerHTML = '<i class="fas fa-play"></i>';
+      }
+    }
+</script>
+
+</html>

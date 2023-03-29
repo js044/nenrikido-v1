@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/css" href="css/rss.css" ?>
+<rss version="2.0"
+	xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Nenrikido</title>
+		<description>Nenrikido's RSS feed</description>
+		<link>https://nenrikido.neocities.org</link>
+		<language>en-us</language>
+		<lastBuildDate> Mon, 28 Mar 2023 22:45:22 +0000 </lastBuildDate>
+		<ttl>60</ttl>
+        <webMaster>nenrikido@pm.me</webMaster>
+
+		<item>
+			<title>Blog Post: Reusable HTML</title>
+			<description>A little tutorial about web components.</description>
+			<link>https://nenrikido.neocities.org/blog</link>
+			<pubDate>Mon, 28 Mar 2023 22:45:22 +0000</pubDate>
+			<author>nenrikido@pm.me (rio)</author> 
+		</item>
+
+		<item>
+			<title>Code page update</title>
+			<description>Code page is up now! Still a bit sparse; hopefully this motivates me to fix up and re-release some old code. I'm thinking about making some stuff for Neocities (and perhaps Neopets?) too.</description>
+			<link>https://nenrikido.neocities.org/code</link>
+			<pubDate>Mon, 28 Mar 2023 02:52:22 +0000</pubDate>
+			<author>nenrikido@pm.me (rio)</author> 
+		</item>
+		<item>
+			<title>Blog Post: Misogyny online</title>
+			<description>3AM rant. As one does</description>
+			<link>https://nenrikido.neocities.org/blog</link>
+			<pubDate>Mon, 27 Mar 2023 04:02:54 +0000</pubDate>
+			<author>nenrikido@pm.me (rio)</author> 
+		</item>
+		<item>
+			<title>New RSS feed</title>
+			<description>I've never tried making an RSS feed before, but I saw a few women with them online and thought I'd try it out! Let me know if anything is weird. Anyways, I'll use this to announce site updates alongside the index page's update section. Recent updates include a blog post about planning a website, a new site clock, an updated to-do list, some new sites in the cool sites section, updated counters, and a new webring!</description>
+			<link>https://nenrikido.neocities.org/</link>
+			<pubDate>Sat, 25 Mar 2023 02:02:54 +0000</pubDate>
+			<author>nenrikido@pm.me (rio)</author> 
+		</item>
+	</channel>
+</rss>

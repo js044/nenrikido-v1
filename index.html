@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NENRIKIDO</title>
+    <link rel='shortcut icon' type='image/x-icon' href='https://dl.dropbox.com/s/x904t9bpbvzlqnr/favicon-32x32.png' />
+    <link href="css/themes.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://nenrikido.neocities.org/feed.xml" rel="alternate" type="application/rss+xml" title="nenrikido site updates" />
+</head>
+
+<body>
+    <back-top></back-top> 
+    <!-- Navigation -->
+    <nav id="nav">
+        <div class="row justify-content-center">
+            <div class="col-3 col-lg-6"> <a class="navLink" href="/">
+                    <div id="home"><br><br></div>Home
+                </a> </div>
+            <div class="col-3 col-lg-6"> <a class="navLink" href="about.html">
+                    <div id="about"><br><br></div>About
+                </a> </div>
+            <div class="col-3 col-lg-6"> <a class="navLink" href="gallery.html">
+                    <div id="gallery"><br><br></div>Gallery
+                </a> </div>
+            <div class="col-3 col-lg-6"> <a class="navLink" href="commissions.html">
+                    <div id="commissions"><br><br></div>Commissions
+                </a> </div>
+            <div class="col-3 col-lg-6"> <a class="navLink" href="code.html">
+                    <div id="code"><br><br></div>Code
+                </a> </div>
+            <div class="col-3 col-lg-6"> <a class="navLink" href="blog.html">
+                    <div id="blog"><br><br></div>Blog
+                </a> </div>
+            <div class="col-3 col-lg-6"> <a class="navLink" href="links.html">
+                    <div id="links"><br><br></div>Links
+                </a> </div>
+            <div class="col-3 col-lg-6"> <a class="navLink" href="https://nenrikido.123guestbook.com/">
+                    <div id="guestbook"><br><br></div>Guestbook
+                </a> </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-auto py-3">
+                <div class="search"> <input type="text" class="searchTerm" placeholder="Search..."> <button type="submit" class="searchButton"> <i class="fa fa-search"></i> </button> </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="cardsWrapper">
+            <div class="row justify-content-center masonry">
+                <!--Landing card-->
+                <div class="col-sm-4 p-3 item">
+                    <div class="cards">
+                        <card-header></card-header>
+                        <div class="cardsBody">
+                            <h1>#WELCOME</h1> <img src="/images/pixels/strovi_pixel.gif" style="float: right; max-width: 80px;">
+                            <p> this is a hybrid portfolio / personal website and a place for me to experiment with front-end code. it is still under construction and a perpetual work in progress, so please excuse anything unfinished. </p>
+                            <p align="center"><i class="fa-solid fa-rss"></i> <a href="feed.xml">RSS feed</a> &nbsp <i class="fa-solid fa-mobile-screen-button"></i> responsive </p>
+                        </div>
+                    </div>
+                </div>
+                <!--Themes card-->
+                <div class="col-sm-4 p-3 item">
+                    <div class="cards">
+                        <card-header></card-header>
+                        <div class="cardsBody">
+                            <h1>#THEMES</h1>
+                            <p>click on an emoji to toggle a theme.</p>
+                            <div class="row justify-content-center">
+                                <div class="col-3 col-lg-3 p-2"> <button id="pink" class="btn-pink theme-button" onclick="handleThemeButtonClick('pink', this)" title="pink">💗</button> </div>
+                                <div class="col-3 col-lg-3 p-2"> <button id="blue" class=".btn btn-blue theme-button" onclick="handleThemeButtonClick('blue', this)" title="blue">🫧</button> </div>
+                                <div class="col-3 col-lg-3 p-2"> <button id="yellow" class=".btn btn-yellow theme-button" onclick="handleThemeButtonClick('yellow', this)" title="yellow">🪐</button> </div>
+                                <div class="col-3 col-lg-3 p-2"> <button id="black" class=".btn btn-black theme-button" onclick="handleThemeButtonClick('black', this)" title="black">💤</button> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Chatbox card-->
+                <div class="col-sm-4 p-3 item">
+                    <div class="cards">
+                        <card-header></card-header>
+                        <div class="cardsBody">
+                            <h1>#CHAT</h1> <iframe src="https://www3.cbox.ws/box/?boxid=3526482&boxtag=h3SRws" width="100%" height="420" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--Counters card-->
+                <div class="col-sm-4 p-3 item">
+                    <div class="cards">
+                        <card-header></card-header>
+                        <div class="cardsBody">
+                            <h1>#COUNTERS</h1>
+                            <p align="center"> all visits: <script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=38931944&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=38931944&main=1" /></noscript> </p>
+                            <p align="center"> current viewers: <script language="javascript" type="text/javascript" src="//counter1.fc2.com/views.php?id=38931944&main=1"></script><noscript><img src="//counter1.fc2.com/counter_now.php?id=38931944&main=1" /></noscript> </p>
+                        </div>
+                    </div>
+                </div>
+                <!--Music card-->
+                <div class="col-sm-4 p-3 item">
+                    <div class="cards">
+                        <card-header></card-header>
+                        <div class="cardsBody">
+                            <h1>#MUSIC</h1>
+                            <div id="aWrap"> <button id="aPlay" disabled><span id="aPlayIco" class="material-icons"> play_arrow </span></button> <input id="aSeek" type="range" min="0" value="0" step="1" disabled>
+                                <div id="aCron"> <span id="aNow"></span> / <span id="aTime"></span> </div>
+                            </div>
+                            <div id="aList">
+                                <p style="text-decoration:underline;"> <i class="fa-solid fa-music"></i> PLAYLIST</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Gifypet card-->
+                <div class="col-sm-4 p-3 item">
+                    <div class="cards">
+                        <card-header></card-header>
+                        <div class="cardsBody">
+                            <h1>#PLAY</h1> <iframe class="pet" scrolling="yes" src="https://gifypet.neocities.org/pet/pet.html?name=aurelia&dob=1678660983&gender=f&element=Water&pet=https%3A%2F%2Fimg.pokemondb.net%2Fsprites%2Fblack-white%2Fanim%2Fshiny%2Ffrillish-f.gif&map=tree.jpg&background=transparent" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--Jelly card-->
+                <div class="col-sm-4 p-3 item">
+                    <div class="cards">
+                        <card-header></card-header>
+                        <div class="cardsBody">
+                            <h1>#JELLY CAM</h1> <iframe class="yt" src="https://www.youtube.com/embed/rJ6_1-E_CLU" title="Live Jelly Cam - Monterey Bay Aquarium" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--Updates card-->
+                <div class="col-sm-4 p-3 item">
+                    <div class="cards">
+                        <card-header></card-header>
+                        <div class="cardsBody">
+                            <h1>#UPDATES</h1>
+                            <ul style="max-height:15em; overflow: scroll;">
+                                <li><b>3-29-23</b>: added some new <a href="links.html">links</a> to the cool sites section & web dev resources. and added the <a href="https://fujofans.scumsuck.com/">fujofans</a> weblisting. old man yaoi will save the world btw</li>
+                                <li><b>3-28-23</b>: added a few things to the <a href="code.html">code</a> page, posted a new tutorial <a href="blog.html">blog</a> post, and added some credits </li>
+                                <li><b>3-27-23</b>: new <a href="blog.html">blog</a> post </li>
+                                <li><b>3-25-23</b>: made an <a href="feed.xml">RSS feed</a> <i class="fa-solid fa-rss"></i> & switched around some homepage windows. yayy </li>
+                                <li><b>3-23-23</b>: new <a href="blog.html">blog</a> post & added a webring to my <a href="links.html">links</a> page! if anything looks weird, it's probably a cache issue—sorry about that.</li>
+                                <li><b>3-21-23</b>: swapped some pixels, debugged mobile displays, general housekeeping, etc.</li>
+                                <li><b>3-20-23</b>: working on <a href="https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/">web components</a> to reduce some HTML clutter 😵‍💫 1.2k lines of code deleted so far...</li>
+                                <li><b>3-17-23</b>: the <a href="gallery.html">gallery</a> is up now! AND the <a href="blog.html">blog</a>! it even has a post! wow! </li>
+                                <li><b>3-16-23</b>: added a <a href="links.html">links page</a> & an <a href="about.html">about page</a>, made a button, etc.</li>
+                                <li><b>3-13-23</b>: it's alive!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--Credits card-->
+                <div class="col-sm-4 p-3 item">
+                    <div class="cards">
+                        <card-header></card-header>
+                        <div class="cardsBody">
+                            <h1>#CREDITS</h1>
+                            <div class="row ">
+                                <div class="col-4 col-sm-6 col-lg-4">
+                                    <div class="banner"><a href="https://strovi.neocities.org/"><img src="images/buttons/strovi.png">
+                                            <p>pixels</p>
+                                        </a> </div>
+                                </div>
+                                <div class="col-4 col-sm-6 col-lg-4">
+                                    <div class="banner"><a href="https://foollovers.com/"><img src="images/buttons/foollovers.gif">
+                                            <p>pixels</p>
+                                        </a> </div>
+                                </div>
+                                <div class="col-4 col-sm-6 col-lg-4">
+                                    <div class="banner"><a href="https://13mo.tumblr.com/"><img src="/images/buttons/13mo.jpg">
+                                            <p>pixels</p>
+                                        </a> </div>
+                                </div>
+                                <div class="col-4 col-sm-6 col-lg-4">
+                                    <div class="banner"><a href="https://www.flaticon.com/authors/paul-j"><img src="https://dl.dropbox.com/s/ndldzs3nih1wss3/paul-j.png?">
+                                            <p>icons</p>
+                                        </a> </div>
+                                </div>
+                                <div class="col-4 col-sm-6 col-lg-4">
+                                    <div class="banner"><a href="https://www.flaticon.com/authors/freepik"><img src="https://dl.dropbox.com/s/sahp07w2qmmq2x6/freepik.jpg?">
+                                            <p>icons</p>
+                                        </a> </div>
+                                </div>
+                                <div class="col-4 col-sm-6 col-lg-4">
+                                    <div class="banner"><a href="https://win98icons.alexmeub.com/"><img src="images/buttons/win98.png">
+                                            <p>icons</p>
+                                        </a> </div>
+                                </div>
+                                <div class="col-4 col-sm-6 col-lg-4">
+                                    <div class="banner"><a href="https://fontawesome.com/"><img src="images/buttons/fontawesome.png">
+                                            <p>icons</p>
+                                        </a> </div>
+                                </div>
+                                <div class="col-4 col-sm-6 col-lg-4">
+                                    <div class="banner"><a href="https://twemoji.twitter.com/"><img src="https://dl.dropbox.com/s/9nq6tp03vlji5o6/twe.png">
+                                            <p>emojis</p>
+                                        </a> </div>
+                                </div>
+                                <div class="col-4 col-sm-6 col-lg-4">
+                                    <div class="banner"><a href="https://getbootstrap.com/"><img src="images/buttons/bootstrap-logo-shadow.png">
+                                            <p>framework</p>
+                                        </a> </div>
+                                </div>
+                                <div class="col-4 col-sm-6 col-lg-4">
+                                    <div class="banner"><a href="https://gifypet.neocities.org/"><img src="https://dl.dropbox.com/s/uz2rf4iya06flh4/badge.gif?">
+                                            <p>gifypet</p>
+                                        </a> </div>
+                                </div>
+                                <div class="col-4 col-sm-6 col-lg-4">
+                                    <div class="banner"><a href="https://counter.fc2.com/en/index.html"><img src="https://dl.dropbox.com/s/5h3x21lmfdsf1uo/fc2.png?">
+                                            <p>counter</p>
+                                        </a> </div>
+                                </div>
+                                <div class="col-4 col-sm-6 col-lg-4">
+                                    <div class="banner"> <a href="https://code-boxx.com/custom-audio-player-playlist/"><img src="https://dl.dropbox.com/s/td4snjgxj3yfhb4/code-boxx.png?">
+                                            <p>music player</p>
+                                        </a></div>
+                                </div>
+                                <!--
+  <div class="col-sm">
+    <div class="banner"><a href="https://www.cbox.ws/"><img src="https://dl.dropbox.com/s/p3ife747iqq0nfd/index.png?"><p>chatbox</p></a>  </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--To-do card-->
+                <div class="col-sm-4 p-3 item">
+                    <div class="cards">
+                        <card-header></card-header>
+                        <div class="cardsBody">
+                            <h1>#TO-DO</h1>
+                            <ul style="max-height:10em; overflow: scroll;">
+                                <li><del>add code page</del> <img src="images/pixels/new.gif"></li>
+                                <li><del>create custom RSS feed</del> <img src="images/pixels/new.gif"></li>
+                                <li>add alt text/accessibility options</li>
+                                <li>make windows functional/draggable</li>
+                                <li>open commissions</li>
+                                <li>make search functional</li>
+                                <li><del>add themes</del></li>
+                                <li><del>start menu sitemap</del></li>
+                                <li><del>isotope/filtered gallery</del> </li>
+                                <li><del>add playlist</del> </li>
+                                <li><del>make reusable html snippets</del></li>
+                                <li><del>make guestbook</del></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <start-menu></start-menu>
+    <taskbar-footer></taskbar-footer>
+</body>
+<!--JS-->
+<script type="text/javascript" src="js/theme.js"></script>
+<script type="text/javascript" src="js/components/card-header.js"></script>
+<script type="text/javascript" src="js/components/start-menu.js"></script>
+<script type="text/javascript" src="js/components/taskbar-footer.js"></script>
+<script type="text/javascript" src="js/components/back-to-top-btn.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/imagesLoaded.js"></script>
+<script type="text/javascript" src="js/masonry-fix.js"></script>
+<script type="text/javascript" src="js/audioPlayer.js"></script>
+<script type="text/javascript" src="js/clock.js"></script>
+<script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+<script>
+    twemoji.parse(document.body)
+</script>
+
+</html>

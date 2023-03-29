@@ -1,0 +1,83 @@
+:root,
+  :root.pink {
+	--primary: #ffc8ea;
+	--secondary: #3d03fc;
+	--secondary_muted: #7653e9;
+	--tertiary: #f3f3f3;
+	--body-font: "National Park", "Helvetica";
+	--header-font: "Reglisse Fill", "Arial Black";
+}
+
+rss {
+	display: block;
+	font-family: var(--body-font);
+	background-color: var(--primary);
+	color: var(--secondary);
+	font-size: 1em;
+}
+
+channel {
+	width: 95%;
+	display: block;
+	padding: 1em 2em 1em 2em;
+}
+
+channel > title {
+	display: block;
+	font-size: 3.5em;
+	font-family: var(--header-font);
+}
+
+channel > description {
+	font-style: italic;
+}
+
+channel > item {
+	background-color: var(--tertiary);
+	border: 2px solid var(--secondary);
+	display: block;
+	padding: 1.5em 1em 2em 1em;
+	margin-top: 1.5em;
+	box-shadow: 6px 6px var(--secondary_muted);
+}
+
+item > title {
+	background-color: var(--secondary);
+	color: var(--primary);
+	font-size: 1em;
+	padding: 5px;
+}
+
+item > link, item > pubDate {
+	display: block;
+	color: var(--secondary_muted);
+	font-style: italic;
+	font-size: 0.8em;
+}
+
+item > link {
+	display: block;
+	float: right;
+	text-align: right;
+	width: 66.66%;
+}
+
+item > pubDate {
+	display: block;
+	float: left;
+	width: 33.33%;
+}
+
+item > description {
+	display: block;
+	margin-bottom: 10px;
+	padding: 15px 0 0 0;
+}
+
+lastBuildDate, language, guid, channel > link {
+	display: none;
+}
+
+ttl, webMaster {
+	display: none;
+}
