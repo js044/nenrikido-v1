@@ -8,6 +8,16 @@
 	--header-font: "Reglisse Fill", "Arial Black";
 }
 
+@font-face {
+	font-family: "Reglisse Fill";
+   src: url(https://dl.dropbox.com/s/22wydar5yexbsnj/Reglisse_Fill.otf);
+}
+
+@font-face {
+	font-family: "National Park";
+  src: url(https://dl.dropbox.com/s/tqtjgxb8x3tk5qb/NationalPark-Regular.otf);
+}
+
 rss {
 	display: block;
 	font-family: var(--body-font);
@@ -78,6 +88,6 @@ lastBuildDate, language, guid, channel > link {
 	display: none;
 }
 
-ttl, webMaster {
+ttl, webMaster, author {
 	display: none;
 }
